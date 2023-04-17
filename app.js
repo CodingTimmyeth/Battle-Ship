@@ -58,7 +58,7 @@ function createBoard(color, user) {
 }
 
 createBoard("steelblue", "player");
-createBoard("gray", "computer");
+createBoard("#2b2b2b", "computer");
 
 function handleValidity(allBlocks, isHorizontal, startIndex, ship) {
   let validStart = isHorizontal
@@ -187,6 +187,7 @@ function startGame() {
   if (playerTurn === undefined) {
     if (option.children.length != 0) {
       info.textContent = "All ships must be placed before start";
+      info.style.color = 'red'
     } else {
       const allBlocks = document.querySelectorAll("#computer div");
       allBlocks.forEach((block) =>
@@ -194,7 +195,10 @@ function startGame() {
       );
       playerTurn = true;
       turn.textContent = "Your turn";
+      turn.style.color = 'green'
       info.textContent = "The war has begun";
+      info.style.color = 'black'
+      info.style.fontStyle = 'none'
     }
   }
 }
