@@ -29,7 +29,7 @@ button{
 .block{
     width: 20px;
     height: 20px;
-    border: 1px solid lightgray;
+    border: 1px solid black;
     box-sizing: border-box;
 }
 
